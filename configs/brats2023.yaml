@@ -1,0 +1,21 @@
+# BraTS 2023 Training Configuration
+data_root: "data/BraTS2023/ASNR-MICCAI-BraTS2023-GLI-Challenge-TrainingData"
+image_size: 1024
+slice_axis: 2
+min_tumor_voxels: 50
+model_type: "vit_b"
+lora_rank: 8
+lora_alpha: 8
+fusion_heads: 8
+use_adaptive_fusion: false
+missing_prob: 0.15
+epochs: 100
+batch_size: 4
+num_workers: 4
+lr: 1.0e-4
+weight_decay: 1.0e-4
+dice_weight: 0.6
+bce_weight: 0.2
+focal_weight: 0.2
+output_dir: "outputs/run_001"
+save_every: 10
